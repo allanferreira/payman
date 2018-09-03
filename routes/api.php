@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('register', RegisterController::class);
+Route::post('login', LoginController::class);
+
 //Authorization : Bearer XXX
 Route::middleware('auth:api')->group(function () {
     Route::apiResource('users', UserController::class);
